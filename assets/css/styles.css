@@ -1,3 +1,5 @@
+/* リキッドレイアウト対応 */
+
 body {
 	font-family: "";
 }
@@ -5,8 +7,6 @@ body {
 .u-desktop {
 	display: none;
 }
-
-/* リキッドレイアウト対応 */
 
 html {
 	font-size: 16px;
