@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
   <!-- meta情報 -->
-  <title>CodeUps</title>
+  <title>SnapOnomichi</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <!-- ogp -->
@@ -17,15 +18,76 @@
   <meta property="og:description" content="" />
   <!-- ファビコン -->
   <link rel="”icon”" href="" />
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Courgette&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kiwi+Maru:wght@400;500&family=Noto+Sans+JP:wght@100..900&display=swap"
+    rel="stylesheet">
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/styles.css">
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script defer src="./js/script.js"></script>
+  <script defer src="src/js/script.js"></script>
 </head>
+
 <body>
-  <div class="inner">
-  <p class="test">変更のテスト</p>
-</div>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header_inner inner">
+      <h1 class="header_logo">
+        <img src="./assets/images/sp/img_logo.svg" alt="サイトのロゴ">
+      </h1>
+      <button class="header_button_sp" id="js_header_button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main class="main">
+    <!-- FV -->
+    <div class="fv">
+      <picture class="fv_img">
+        <source media="(max-width:768px)" srcset="./assets/images/sp/fv.jpg" />
+        <img src="./assets/images/pc/fv.jpg" alt="尾道の写真" />
+      </picture>
+      <div class="fv_inner">
+        <p class="fv_text">あなたの見つけたレトロな尾道の一枚を<br>
+          Instagramに投稿しよう</p>
+        <h2 class="fv_title">
+          <div class="fv_title_top">
+            <img src="./assets/images/pc/img_title1.svg" alt="見つけて尾道レトロ" />
+          </div>
+          <div class="fv_title_bottom">
+            <img src="./assets/images/pc/img_title2.svg" alt="キャンペーン" />
+          </div>
+        </h2>
+        <div class="fv_icon">
+          <img class="fv_icon_left" src="./assets/images/pc/img_fukidashi.svg" alt="Share a moment in a snap">
+          <img class="fv_icon_right" src="./assets/images/pc/img_present.svg" alt="尾道ギフトを100名様にプレゼント">
+        </div>
+        <div class="fv_smartphone">
+          <picture>
+            <source media="(max-width:768px)" srcset="./assets/images/sp/img_smartphone.png" />
+            <img src="./assets/images/pc/img_smartphone.png" alt="スマートフォン" />
+          </picture>
+          <div class="fv_box">
+            <h3 class="fv_box_title">#見つけて尾道レトロ</h3>
+            <p>応募期間</p>
+            <p>2022/8/1(月)〜9/30(金)</p>
+            <a href="">応募してみる</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+  </div>
 </body>
+
 </html>
