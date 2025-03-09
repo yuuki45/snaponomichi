@@ -1,0 +1,99 @@
+@use "global" as *;
+
+.button {
+  font-size: rem(14);
+  font-weight: 700;
+  line-height: 1.6;
+  color: $font-color-1;
+  padding: rem(5) rem(20);
+  background-color: #fff;
+  border: rem(2) solid #4A3636;
+  box-shadow: 0 4px 0 0 #4A3636;
+  border-radius: 40px;
+  display: inline-block;
+  cursor: pointer;
+
+  @include mq("lg") {
+    font-size: 16px;
+    padding: 6px 22px;
+  }
+}
+
+.button:hover {
+  background-color: $accent-color-2;
+  opacity: 1;
+}
+
+.button_header {
+  height: 36px;
+  margin: auto;
+
+  @include mq("lg") {
+    font-size: 14px;
+    padding: 5px 20px;
+  }
+}
+
+.button_about {
+  font-size: rem(16);
+  padding: 6px 24px 8px;
+  margin-top: rem(24);
+
+  @include mq('lg') {
+    font-size: 20px;
+    padding: 10px 40px 12px;
+  }
+}
+
+.button_wrap {
+  text-align: center;
+}
+
+.button_how {
+  font-size: rem(16);
+  margin: 16px auto 0;
+
+  @include mq('lg') {
+    font-size: 20px;
+    padding: 10px 40px;
+    margin: 40px auto 0;
+  }
+}
+
+.button_prizes,
+.button_spot {
+  font-size: rem(16);
+  margin: 24px auto 0;
+}
+
+.button_spot {
+  @include mq('lg') {
+    font-size: 18px;
+  }
+  @include mq('xl') {
+    padding: 10px 40px;
+    font-size: 20px;
+  }
+}
+
+.button_prizes {
+  @include mq('lg') {
+    margin-top: 40px;
+  }
+}
+
+.button_modal_close {
+  margin-top: 16px;
+
+  @include mq('lg') {
+    margin-top: 24px;
+  }
+}
+
+.button_modal_close:focus {
+  outline:  5px solid $main-color;
+}
+
+.button_submit {
+  margin-top: 24px;
+}

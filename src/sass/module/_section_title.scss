@@ -1,0 +1,71 @@
+@use "global" as *;
+
+.section_title {
+  text-align: center;
+}
+
+.section_title_image {
+  width: 37px;
+  height: 37px;
+  display: inline-block;
+
+  @include mq('lg') {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.section_title_en {
+  display: block;
+  font-family: $font-family-3;
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: 1.25;
+
+  @include mq('lg') {
+    font-size: 20px;
+  }
+}
+
+.section_title_jp {
+  font-family: $font-family-2;
+  font-size: rem(20);
+  font-weight: 400;
+  line-height: 1.25;
+  width: fit-content;
+  padding-bottom: 6px;
+  margin: 6px auto 0;
+  border-bottom: 6px solid $accent-color-2;
+
+  @include mq('lg') {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 8px auto 0;
+    padding-bottom: 8px;
+    border-bottom: 8px solid $accent-color-2;
+  }
+}
+
+.section_title_about {
+  margin-top: -44px;
+
+  @include mq('lg') {
+    margin-top: -80px;
+  }
+}
+
+.section_title_prizes {
+  position: absolute;
+  top: -65px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+
+  @include mq('lg') {
+    top: -120px;
+  }
+}
+
+.section_title_qa {
+  margin-top: 83px;
+}

@@ -1,0 +1,81 @@
+@use "global"as *;
+
+.modal {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  padding: 0;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal_contents {
+  width: rem(336);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+
+  @include mq("lg") {
+    width: 480px;
+  }
+}
+
+.modal_image {
+  display: block;
+  width: 100%;
+  height: 210px;
+
+  @include mq("lg") {
+    height: 300px;
+  }
+}
+
+.modal_image img {
+  height: 210px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+
+  @include mq("lg") {
+    height: 300px;
+    border-radius: 16px 16px 0 0;
+  }
+}
+
+.modal_body {
+  text-align: center;
+  background-color: #fff;
+  padding: 39px 20px 56px;
+  border-radius: 0 0 8px 8px;
+
+  @include mq("lg") {
+    height: 350px;
+    padding: 32px 40px 64px;
+    border-radius: 0 0 16px 16px;
+  }
+}
+
+.modal_title {
+  font-size: 16px;
+  font-weight: bold;
+  color: $font-color-1;
+
+  @include mq("lg") {
+    font-size: 20px;
+  }
+}
+
+.modal_text {
+  font-size: 12px;
+  margin-top: 12px;
+
+  @include mq("lg") {
+    font-size: 16px;
+  }
+}
+
+

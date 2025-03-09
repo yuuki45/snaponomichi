@@ -1,0 +1,278 @@
+@use "global"as *;
+
+.contact {
+  background-color: #fff;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.contact_head {
+  font-size: rem(12);
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.contact_form {
+  max-width: 500px;
+  margin: 24px auto 0;
+}
+
+.contact_form_label {
+  display: block;
+}
+
+.contact_form_label:not(:first-child) {
+  margin-top: 24px;
+}
+
+.contact_form_title {
+  font-size: rem(14);
+  font-weight: 700;
+  line-height: 1.6;
+  display: inline-block;
+}
+
+.contact_form_required {
+  padding: rem(4) rem(8);
+  background-color: #CE2073;
+  border-radius: 4px;
+  font-size: rem(12);
+  font-weight: 700;
+  line-height: 1.6;
+  color: #fff;
+  margin-left: rem(12);
+}
+
+input[type="text"],
+input[type="email"] {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  padding: rem(16);
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: 1.6;
+  color: $font-color-1;
+  margin-top: 8px;
+}
+
+// フォーカス時
+input[type="text"]:focus,
+input[type="email"]:focus {
+  outline: 2px solid $main-color;
+}
+
+input[type="checkbox"]:focus+span::before,
+input[type="radio"]:focus+span::before {
+  outline: 2px solid $main-color
+}
+
+input[type="text"]::placeholder,
+input[type="email"] ::placeholder {
+  font-size: rem(14);
+  font-weight: 400;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+select:focus {
+  outline: 2px solid $main-color
+}
+
+// セレクトボックス
+select {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  padding: rem(16);
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  font-size: rem(14);
+  font-weight: 400;
+  line-height: 1.6;
+  color: $font-color-1;
+  margin-top: 8px;
+  background-image: url(/assets/images/sp/Icon_down.svg), linear-gradient(to left, #9ed0e0 52px, #f5f5f5 52px);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center right 10px, center center;
+}
+
+// .select_wrap {
+//   position: relative;
+// }
+
+// .select_wrap::before {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   width: rem(52);
+//   height: 100%;
+//   background-color: $main-color;
+//   border-radius: 0 8px 8px 0;
+//   pointer-events: none;
+// }
+
+// .select_wrap::after {
+//   content: "";
+//   position: absolute;
+//   width: rem(32);
+//   height: rem(32);
+//   background: url(/assets/images/sp/Icon_down.svg) no-repeat center center / contain;
+//   top: rem(11.5);
+//   right: rem(10.5);
+//   pointer-events: none;
+// }
+
+// ラジオボタン文字部分（クリック範囲）
+input[type="radio"]+span {
+  display: inline-block;
+  position: relative;
+  padding: 5px 5px 5px 32px;
+  margin-top: 8px;
+  font-size: rem(14);
+  font-weight: 400;
+  line-height: 1;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+// ラジオボタン
+input[type="radio"]+span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  line-height: 1;
+  background-color: #f5f5f5;
+}
+
+// ラジオボタン選択時
+input[type="radio"]:checked+span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #3d98b4;
+  line-height: 1;
+}
+
+// ラジオボタン未選択時
+input[type="radio"]+span::after {
+  content: "";
+  display: none;
+}
+
+.contact_radio_wrap {
+  margin-top: 24px;
+}
+
+.contact_radio_title {
+  font-size: rem(14);
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.contact_label_wrap label {
+  display: inline-block;
+}
+
+.contact_label_wrap label:first-child {
+  margin-right: 24px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: 1.6;
+  color: $font-color-1;
+  padding: 16px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  height: 160px;
+  margin-top: 8px;
+}
+
+// チェックボックス文字部分（クリック範囲）
+input[type="checkbox"]+span {
+  display: inline-block;
+  position: relative;
+  font-size: rem(14);
+  font-weight: 400;
+  line-height: 1;
+  padding: 5px 5px 5px 36px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.contact_checkbox_pp{
+  text-decoration: underline;
+}
+
+// チェックボックスの四角装飾
+input[type="checkbox"]+span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+// チェックボックスのチェック時
+input[type="checkbox"]:checked+span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 8px;
+  width: 7px;
+  height: 15px;
+  border-bottom: 3px solid #3d98b4;
+  border-right: 3px solid #3d98b4;
+  transform: rotate(45deg);
+}
+
+// チェックボックス未チェック時
+input[type="checkbox"]+span::after {
+  content: "";
+  display: none;
+}
+
+.contact_checkbox_wrap {
+  margin-top: 24px;
+  text-align: center;
+}
+
+// バリデーションエラー
+input:focus:user-invalid,
+textarea:focus:user-invalid {
+  outline: 2px solid #CE2073;
+  background-color: #fff0f7;
+}
+
+.js_input.is_error {
+  outline: 2px solid #CE2073;
+  background-color: #fff0f7;
+}
+
+.select.is_error {
+  background-image: url(/assets/images/sp/Icon_down.svg), linear-gradient(to left, #ce2073 52px, #f5f5f5 52px);
+}

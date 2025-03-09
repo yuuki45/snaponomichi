@@ -1,0 +1,55 @@
+@use "global"as *;
+
+.swiper {
+  width: 100%;
+}
+
+.swiper-wrapper {
+  transition-timing-function: linear;
+}
+
+.swiper-slide {
+  width: 100px;
+}
+
+.swiper_spot {
+  @include mq('md') {
+    margin-left: auto;
+    overflow: hidden;
+  }
+}
+
+.swiper-button-box {
+  display: none;
+
+  @include mq('lg') {
+    max-width: 775px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+
+  @include mq('xl') {
+    max-width: 944px;
+  }
+}
+
+
+.swiper-button-prev {
+  top: auto;
+  bottom: -30px;
+  left: -50px;
+  width: 80px;
+  height: 80px;
+  position: static;
+}
+
+.swiper-button-next {
+  top: auto;
+  bottom: -30px;
+  left: 55%;
+  width: 80px;
+  height: 80px;
+  position: static;
+}

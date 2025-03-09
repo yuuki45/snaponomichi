@@ -1,0 +1,115 @@
+@use "global"as *;
+
+.accordion {
+  max-width: 600px;
+  margin: 24px auto 0;
+  padding-bottom: 30px;
+}
+
+.accordion_list+.accordion_list {
+  margin-top: 12px;
+}
+
+.accordion_list {
+  border: 2px solid #4A3636;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.accordion_area {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: rem(12);
+  padding: rem(12) rem(16);
+  background-color: #fff;
+  border-radius: 12px 12px 0 0;
+  cursor: pointer;
+}
+
+.accordion_area:focus {
+  border: 2px solid $sub-color;
+  border-radius: 10px;
+}
+
+.accordion_q {
+  font-family: $font-family-4;
+  color: $main-color;
+  font-size: rem(24);
+  line-height: 1.25;
+  display: block;
+}
+
+.accordion_title {
+  font-size: rem(14);
+  font-weight: 700;
+  color: #4A3636;
+  line-height: 1.6;
+  text-align: left;
+  transition: all 0.4s ease;
+}
+
+.accordion_toggle {
+  width: rem(26);
+  height: rem(26);
+  background-color: $main-color;
+  border-radius: 50%;
+  position: relative;
+  display: block;
+  margin-left: auto;
+}
+
+/* ＋部分 */
+.accordion_toggle::before,
+.accordion_toggle::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+}
+
+.accordion_toggle::before {
+  top: 50%;
+  left: 50%;
+  transform:  translate(-50%,-50%) rotate(90deg);
+}
+
+.accordion_toggle::after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.accordion_toggle.close::before {
+  transform: translate(-50%,-50%);
+}
+
+/* 開く部分 */
+.accordion_box {
+  display: none;
+  padding: rem(16);
+}
+
+.accordion_box_contents {
+  display: flex;
+  align-items: center;
+  gap: rem(16);
+}
+
+.accordion_a {
+  font-size: rem(24);
+  font-weight: 400;
+  line-height: 1.25;
+  font-family: $font-family-4;
+  color: $main-color;
+}
+
+.accordion_answer {
+  font-size: rem(14);
+  font-weight: 400;
+  line-height: 1.6;
+}
+

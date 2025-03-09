@@ -1,0 +1,127 @@
+@use "global"as *;
+
+.footer {
+  padding-top: 40px;
+}
+
+.footer_head {
+  font-family: $font-family-4;
+  font-size: rem(20);
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.footer_sns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 24px;
+}
+
+.footer_sns img {
+  width: 32px;
+  height: 32px;
+}
+
+.footer_text_logo {
+  margin-top: 9px;
+}
+
+.footer_map {
+  margin-bottom: -5px;
+}
+
+.footer_map iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 335 / 271;
+  border-radius: 12px 12px 0 0;
+}
+
+.footer_info {
+  padding: rem(24);
+  background-color: #fff;
+  border-radius: 0 0 12px 12px;
+}
+
+.footer_info_contents {
+  margin: 24px auto 0;
+  max-width: 335px;
+}
+
+.footer_info_logo {
+  width: 153px;
+  margin: 0 auto;
+}
+
+.footer_info_row {
+  display: flex;
+  align-items: center;
+  gap: rem(16);
+}
+
+.footer_info_row:not(:first-child) {
+  margin-top: 8px;
+}
+
+.footer_info_dt {
+  font-size: rem(12);
+  font-weight: 700;
+  line-height: 1.6;
+  width: vw(280, 64);
+  padding-left: 16px;
+  position: relative;
+}
+
+.footer_info_dt::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: $main-color;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.footer_info_dd {
+  font-size: rem(12);
+  font-weight: 400;
+  line-height: 1.6;
+  width: vw(280, 200);
+}
+
+.footer_bottom {
+  position: relative;
+  background-color: $sub-color;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #fff;
+  margin-top: rem(171);
+  padding-bottom: 24px;
+}
+
+.footer_bottom::before {
+  content: "";
+  position: absolute;
+  top: rem(-45);
+  left: 0;
+  width: 100%;
+  height: 46px;
+  background: url(/assets/images/sp/bg_wavearea.svg) repeat-x center / contain;
+}
+
+.to_top {
+  position: absolute;
+  bottom: rem(110);
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: rem(75);
+  margin: 24px auto 0;
+}

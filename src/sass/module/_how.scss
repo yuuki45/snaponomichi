@@ -1,0 +1,246 @@
+@use "global"as *;
+
+.how {
+  position: relative;
+  padding-bottom: 38px;
+}
+
+.how_inner {
+  position: relative;
+  max-width: 375px;
+  margin: auto;
+  padding: 0 rem(20);
+
+  @include mq('lg') {
+    max-width: 1512px;
+  }
+}
+
+.how_bg_01 {
+  position: absolute;
+  display: block;
+  width: rem(149);
+  top: 10px;
+  left: -20px;
+
+  @include mq('lg') {
+    width: 420px;
+    top: -45px;
+    left: auto;
+    right: calc(50% + 280px);
+    z-index: -5;
+  }
+}
+
+.how_bg_02 {
+  position: absolute;
+  display: block;
+  width: rem(105);
+  top: 0;
+  right: 20px;
+
+  @include mq('lg') {
+    width: 238px;
+    top: -40px;
+    right: auto;
+    left: calc(50% + 280px);
+  }
+}
+
+.how_bg_03 {
+  position: absolute;
+  display: block;
+  width: rem(94);
+  top: 5px;
+  right: -30px;
+
+  @include mq('lg') {
+    width: 214px;
+    top: -40px;
+    right: auto;
+    left: calc(50% + 425px);
+  }
+}
+
+.how_bg_04 {
+  position: absolute;
+  display: block;
+  width: rem(55);
+  top: 100px;
+  right: rem(20);
+
+  @include mq('lg') {
+    width: 100px;
+    top: 145px;
+    right: auto;
+    left: calc(50% + 620px);
+  }
+}
+
+.how_bg_05 {
+  position: absolute;
+  display: block;
+  width: rem(55);
+  top: 550px;
+  left: rem(20);
+
+  @include mq('lg') {
+    width: 100px;
+    left: auto;
+    right: calc(50% + 600px);
+  }
+}
+
+.how_bg_06 {
+  position: absolute;
+  display: block;
+  width: rem(55);
+  bottom: 340px;
+  right: rem(20);
+
+  @include mq('lg') {
+    display: none;
+  }
+}
+
+.how_step_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  @include mq('lg') {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 32px;
+  }
+}
+
+.how_step_wrap div:nth-child(2),
+.how_step_wrap div:nth-child(3) {
+  position: relative;
+}
+
+.how_step_wrap div:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: -35px;
+  left: calc(50% - 7px);
+  background: url(/assets/images/sp/img_step_line.png) no-repeat center center / cover;
+  width: 7px;
+  height: 34px;
+
+  @include mq('lg') {
+    width: 113px;
+    height: 24px;
+    background: url(/assets/images/pc/img_step_line.svg) no-repeat center center / cover;
+    top: 140px;
+    left: -96px;
+  }
+}
+
+.how_step_wrap div:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  top: -35px;
+  left: calc(50% - 7px);
+  background: url(/assets/images/sp/img_step_line.png) no-repeat center center / cover;
+  width: 7px;
+  height: 34px;
+
+  @include mq('lg') {
+    width: 113px;
+    height: 24px;
+    background: url(/assets/images/pc/img_step_line.svg) no-repeat center center / cover;
+    top: 205px;
+    left: -88px;
+  }
+}
+
+.how_step_image {
+  width: rem(196);
+  margin: 0 auto 0;
+
+  @include mq('lg') {
+    width: 280px;
+  }
+}
+
+.how_step:first-child {
+  margin-top: rem(32);
+
+  @include mq('lg') {
+    margin: 0;
+  }
+}
+
+.how_step:nth-child(2) {
+  @include mq('lg') {
+    margin-top: 69px;
+  }
+}
+
+.how_step {
+  text-align: center;
+
+  @include mq('lg') {
+    width: 33.3%;
+    max-width: 320px;
+  }
+}
+
+.how_step h3 {
+  margin-top: 16px;
+  font-weight: 700;
+  line-height: 1.6;
+
+  @include mq('lg') {
+    font-size: 18px;
+    margin-top: 24px;
+  }
+
+  @include mq('xl') {
+    font-size: 20px;
+  }
+}
+
+.how_step p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-top: 16px;
+
+  @include mq('xl') {
+    font-size: 16px;
+  }
+}
+
+.how_onomichi_tabi {
+  display: inline-block;
+  background-color: #fff;
+  padding: rem(8) rem(12) rem(8) rem(40);
+  font-size: rem(14);
+  font-weight: bold;
+  line-height: 1.6;
+  position: relative;
+  margin-top: 16px;
+
+  @include mq('lg') {
+    font-size: 16px;
+  }
+}
+
+.how_onomichi_tabi::before {
+  content: "";
+  position: absolute;
+  top: rem(9);
+  left: rem(12);
+  background: url(/assets/images/sp/Icon_insta.png) center / contain;
+  width: 20px;
+  height: 20px;
+
+  @include mq('lg') {
+    width: 24px;
+    height: 24px;
+  }
+}

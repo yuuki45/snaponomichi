@@ -1,0 +1,220 @@
+@use "global"as *;
+
+.spot {
+  position: relative;
+}
+
+.spot::before {
+  content: "";
+  position: absolute;
+  top: rem(-44.7);
+  left: 0;
+  width: 100%;
+  height: rem(45.7);
+  background: url(/assets/images/sp/wave.svg) repeat-x center / contain;
+
+  @include mq('lg') {
+    background: url(/assets/images/pc/wave_spot.svg) repeat-x center / contain;
+    height: 120px;
+    top: -95px;
+  }
+
+  @include mq('xl') {
+    background-image: url(/assets/images/pc/wave_spot.svg);
+    background-size: 1512px 120px;
+    height: 120px;
+    top: -118px;
+  }
+}
+
+.spot::after {
+  content: "";
+  position: absolute;
+  bottom: rem(-43);
+  left: 0;
+  width: 100%;
+  height: rem(45);
+  background: url(/assets/images/sp/bg_pic_bottom.svg) repeat-x center / contain;
+  z-index: -1;
+
+  @include mq('lg') {
+    background: url(/assets/images/pc/wave_spot2.svg) repeat-x center / contain;
+    height: 120px;
+  }
+}
+
+.spot_container {
+  background-color: $sub-color;
+  padding-bottom: 20px;
+
+  @include mq('lg') {
+    padding-bottom: 80px;
+  }
+}
+
+.spot_slider_wrap {
+  position: relative;
+}
+
+.spot_title {
+  font-family: $font-family-2;
+  font-size: rem(28);
+  font-weight: 500;
+  line-height: 1.25;
+  color: #fff;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto;
+  padding-left: 36px;
+  position: relative;
+
+  @include mq('lg') {
+    position: absolute;
+    top: 64px;
+    left: calc(50% - 400px);
+    writing-mode: vertical-lr;
+    padding-left: 0;
+    line-height: 1;
+    font-size: 40px;
+    letter-spacing: 5px;
+  }
+
+  @include mq('xl') {
+    left: calc(50% - 500px);
+  }
+}
+
+.spot_title::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background: url(/assets/images/sp/star.svg) no-repeat center center / cover;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+
+  @include mq('lg') {
+    width: 56px;
+    height: 56px;
+    top: -65px;
+    left: -6px;
+    transform: translateY(0);
+  }
+}
+
+.spot_slider {
+  margin-top: 24px;
+
+  @include mq('lg') {
+    margin-left: auto;
+    position: relative;
+    left: calc(50% - 320px);
+  }
+
+  @include mq('xl') {
+    left: calc(50% - 420px);
+  }
+}
+
+.spot_slide {
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.spot_slide img {
+  border-radius: 12px 12px 0 0;
+
+  @include mq('lg') {
+    height: 240px;
+  }
+}
+
+.spot_name {
+  font-size: rem(16);
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 16px;
+
+  @include mq('lg') {
+    font-size: 20px;
+    margin-top: 24px;
+  }
+}
+
+.spot_text {
+  font-size: rem(12);
+  font-weight: 400;
+  line-height: 1.6;
+  height: rem(191);
+  padding: rem(16) rem(24);
+
+  @include mq('lg') {
+    font-size: 16px;
+    margin-top: 24px;
+    padding: 0 32px;
+    height: 222px;
+  }
+}
+
+.spot_bg {
+  @include mq('lg') {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    gap: 30px;
+    margin-top: 64px;
+  }
+  @include mq('xl') {
+    gap: 81px;
+  }
+}
+
+.spot_bg::after {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: calc(50% + 590px);
+  width: 100px;
+  height: 220px;
+  background: url(/assets/images/pc/img_bg_pawpads.svg) no-repeat center center / cover;
+}
+
+.spot_bg_image {
+  width: rem(254);
+  margin: 0 auto;
+
+  @include mq('lg') {
+    width: 350px;
+    margin: 0;
+  }
+  @include mq('xl') {
+    width: 495px;
+    margin: 0;
+  }
+}
+
+.spot_bottom_text {
+  font-size: rem(12);
+  font-weight: 400;
+  line-height: 1.6;
+  color: #fff;
+  text-align: center;
+  margin-top: 16px;
+
+  @include mq('lg') {
+    font-size: 14px;
+    margin: 0;
+  }
+  @include mq('xl') {
+    font-size: 16px;
+  }
+}
+
+.spot_wave_bottom {
+  position: absolute;
+  bottom: rem(-44);
+  left: 0;
+  right: 0;
+}

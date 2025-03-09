@@ -45,9 +45,9 @@ ol {
 }
 
 /* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
+// a:not([class]) {
+//   text-decoration-skip-ink: auto;
+// }
 
 /* Make images easier to work with */
 img {
@@ -57,7 +57,7 @@ img {
 }
 
 /* Natural flow and rhythm in articles by default */
-article > * + * {
+article>*+* {
   margin-top: 1em;
 }
 
@@ -70,9 +70,9 @@ select {
 }
 
 /* Blur images when they have no alt attribute */
-img:not([alt]) {
-  filter: blur(10px);
-}
+// img:not([alt]) {
+//   filter: blur(10px);
+// }
 
 
 /* フォームリセット */
@@ -97,8 +97,10 @@ textarea {
 
 input[type="checkbox"],
 input[type="radio"] {
-  display: none;
+  opacity: 0;
+  position: absolute;
 }
+
 
 input[type="submit"],
 input[type="button"],
@@ -110,4 +112,11 @@ select {
 
 select::-ms-expand {
   display: none;
+}
+
+fieldset,
+legend {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
