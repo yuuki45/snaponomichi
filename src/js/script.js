@@ -2,25 +2,45 @@
 document.addEventListener('DOMContentLoaded', function () {
   const headerBtn = document.querySelector('#js_header_button');
   const menu = document.querySelector('.menu');
-  const menuNavItems = document.querySelectorAll('.menu_nav_item');
-  const body = document.body;
+  const menuNav = document.querySelector('.menu_nav');
+  const breakpoint = 900; // ブレークポイント（画面幅）
 
-  function toggleDrawer() {
+  function toggleMenu() {
     headerBtn.classList.toggle('active');
     menu.classList.toggle('active');
-    // スクロール禁止
-    body.classList.toggle('is_fixed');
+    updateMenuState();
   }
 
-  headerBtn.addEventListener('click', toggleDrawer);
+  function updateMenuState() {
+    // メニュー画面が表示されているかどうか
+    if (menu.classList.contains('active')) {
+      // 画面幅がブレークポイント以上かどうか
+      if (window.innerWidth >= breakpoint) {
+        menu.style.display = 'none';
+        document.body.classList.remove('fixed-scroll');
+        document.documentElement.classList.remove('fixed-scroll');
+      } else {
+        menu.style.display = 'block';
+        document.body.classList.add('fixed-scroll');
+        document.documentElement.classList.add('fixed-scroll');
+      }
+    } else {
+      menu.style.display = ''; // デフォルトの表示に戻す
+      document.body.classList.remove('fixed-scroll');
+      document.documentElement.classList.remove('fixed-scroll');
+    }
+  }
 
-  menuNavItems.forEach(function (item) {
-    item.addEventListener('click', function () {
-      toggleDrawer();
-      // スクロールを有効にする
-      body.classList.remove('is_fixed');
-    });
+  headerBtn.addEventListener('click', toggleMenu);
+
+  menuNav.addEventListener('click', function (event) {
+    if (event.target.classList.contains('menu_nav_item')) {
+      toggleMenu();
+    }
   });
+
+  // 画面サイズ変更時にもメニューの状態を更新
+  window.addEventListener('resize', updateMenuState);
 });
 
 // swiper(about)
@@ -62,11 +82,9 @@ const swiper_spot = new Swiper(".swiper_spot", {
   breakpoints: {
     700: {
       slidesPerView: 1,
-      // centeredSlides: false,
       width: 320,
     },
     900: {
-      // slidesPerView: 2.2,
       slidesPerView: 1,
       centeredSlides: false,
       spaceBetween: 32,

@@ -1376,7 +1376,11 @@ textarea:focus:user-invalid {
 	display: block;
 }
 
-body.is_fixed {
+body.fixed-scroll {
+	overflow: hidden;
+}
+
+html.fixed-scroll {
 	overflow: hidden;
 }
 
